@@ -11,12 +11,39 @@
     body {
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #f9f9f9;
+      background-image: url('https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-blend-mode: overlay;
+      background-color: rgba(249, 249, 249, 0.9);
       padding: 30px;
       color: #333;
     }
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 20px;
+      background: rgba(240, 240, 240, 0.9);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(5px);
+    }
+    nav a {
+      margin: 0 10px;
+      color: #2E7D32;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #1B5E20; }
     header {
       text-align: center;
       margin-bottom: 40px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
     header h1 {
       font-size: 40px;
@@ -32,6 +59,10 @@
       max-width: 800px;
       margin: 0 auto 40px;
       text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
     .brand-intro h2 {
       color: #2E7D32;
@@ -49,7 +80,7 @@
       margin: 0 auto;
     }
     .card {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.95);
       border-radius: 14px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       padding: 25px;
@@ -57,6 +88,7 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-decoration: none;
       color: inherit;
+      backdrop-filter: blur(5px);
     }
     .card:hover {
       transform: translateY(-5px);
@@ -79,12 +111,13 @@
       line-height: 1.5;
     }
     .plan-card {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 14px;
       padding: 25px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-align: center;
+      backdrop-filter: blur(5px);
     }
     .plan-card:hover {
       transform: translateY(-5px);
@@ -140,9 +173,14 @@
       max-width: 800px;
       margin: 40px auto;
       text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      backdrop-filter: blur(5px);
     }
     .review-card, .delivery-card {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 14px;
       padding: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.06);
@@ -178,6 +216,11 @@
       text-align: center;
       color: #888;
       font-size: 14px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      backdrop-filter: blur(5px);
     }
     .social-icons {
       margin-top: 10px;
@@ -186,7 +229,9 @@
       margin: 0 10px;
       color: #2E7D32;
       font-size: 20px;
+      transition: color 0.2s;
     }
+    .social-icons a:hover { color: #1B5E20; }
     @media (max-width: 768px) {
       body { padding: 15px; }
       header h1 { font-size: 32px; }
@@ -196,17 +241,23 @@
   </style>
 </head>
 <body>
-  <nav style="display: flex; justify-content: flex-end; padding: 10px 20px; background: #f0f0f0;">
+  <nav>
+    <a href="index.html" style="margin: 0 10px; color: #2E7D32; text-decoration: none; font-weight: bold;">메인</a>
     <a href="mypage.html" style="margin: 0 10px; color: #2E7D32; text-decoration: none; font-weight: bold;">마이페이지</a>
     <a href="login.html" style="margin: 0 10px; color: #2E7D32; text-decoration: none;">로그인</a>
   </nav>
-  <header style="text-align: center; margin-bottom: 40px;">
-    <svg width="150" height="80" viewBox="0 0 150 80" style="margin-bottom: 15px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.16));">
-      <rect x="20" y="15" width="110" height="50" rx="12" fill="#2E7D32" stroke="#1B5E20" stroke-width="2"/>
-      <text x="75" y="48" text-anchor="middle" fill="white" font-family="'Noto Sans KR', sans-serif" font-weight="bold" font-size="20">스꾸밀</text>
-    </svg>
-    <p style="font-size: 18px; color: #777;">건강한 정기 도시락, 학교까지 따뜻하게!</p>
-  </header>
+  <header style="text-align: center; margin-bottom: 40px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 24px; max-width: 800px; margin-left: auto; margin-right: auto;">
+  <h1 style="font-size: 36px; font-weight: 800; color: #2E7D32; margin-bottom: 12px; letter-spacing: -0.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+    스꾸밀
+  </h1>
+  <p style="font-size: 18px; color: #555; margin-bottom: 0; line-height: 1.6;">
+    스마트하게, 꾸준하게!<br>
+    건강한 한 끼, 스꾸밀과 함께하세요.
+  </p>
+</header>
+
+</header>
+
   <div class="brand-intro">
     <h2>스꾸밀만의 특별한 도시락</h2>
     <p>
@@ -215,62 +266,68 @@
     </p>
   </div>
 
-  <!-- 메뉴 카드 -->
-  <div class="card-container">
-    <a href="menu1.html" class="card">
-      <i class="fas fa-utensils"></i>
-      <h3>한식 안심 도시락</h3>
-      <p>된장국, 잡채, 불고기까지 집밥 느낌 가득!</p>
-    </a>
-    <a href="menu2.html" class="card">
-      <i class="fas fa-dumbbell"></i>
-      <h3>고단백/헬스 도시락</h3>
-      <p>닭가슴살과 고단백 재료로 운동 후 든든하게!</p>
-    </a>
-    <a href="menu3.html" class="card">
-      <i class="fas fa-leaf"></i>
-      <h3>다이어트 샐러드 도시락</h3>
-      <p>신선한 채소로 가볍고 건강하게!</p>
-    </a>
+  <!-- 추천 메뉴 -->
+  <div style="max-width: 1000px; margin: 0 auto 40px; text-align: center;">
+    <h2 style="color: #2E7D32; margin-bottom: 20px;">이번 주 추천 메뉴</h2>
+    <div class="card-container">
+      <a href="menu1.html" class="card">
+        <i class="fas fa-utensils"></i>
+        <h3>한식 안심 도시락</h3>
+        <p>된장국, 잡채, 불고기까지 집밥 느낌 가득!</p>
+      </a>
+      <a href="menu2.html" class="card">
+        <i class="fas fa-dumbbell"></i>
+        <h3>고단백/헬스 도시락</h3>
+        <p>닭가슴살과 고단백 재료로 운동 후 든든하게!</p>
+      </a>
+      <a href="menu3.html" class="card">
+        <i class="fas fa-leaf"></i>
+        <h3>다이어트 샐러드 도시락</h3>
+        <p>신선한 채소로 가볍고 건강하게!</p>
+      </a>
+    </div>
   </div>
 
   <!-- 정기구독 플랜 카드 -->
-  <div class="card-container" style="margin-top: 40px;">
-    <div class="plan-card">
-      <h3>주 3회 구독</h3>
-      <div class="price">월 45,000원</div>
-      <ul>
-        <li><i class="fas fa-check"></i> 주 3회 신선 배송</li>
-        <li><i class="fas fa-check"></i> 다양한 메뉴 제공</li>
-        <li><i class="fas fa-check"></i> 무료 배송</li>
-        <li><i class="fas fa-check"></i> 구독 해지 언제든 가능</li>
-      </ul>
-      <a href="apply.html" class="order-button">구독 신청하기</a>
-    </div>
-    <div class="plan-card">
-      <h3>주 5회 구독</h3>
-      <div class="price">월 65,000원</div>
-      <ul>
-        <li><i class="fas fa-check"></i> 주 5회 신선 배송</li>
-        <li><i class="fas fa-check"></i> 다양한 메뉴 제공</li>
-        <li><i class="fas fa-check"></i> 무료 배송</li>
-        <li><i class="fas fa-check"></i> 구독 해지 언제든 가능</li>
-        <li><i class="fas fa-check"></i> 구독 특별 할인</li>
-      </ul>
-      <a href="apply.html" class="order-button">구독 신청하기</a>
-    </div>
-    <div class="plan-card">
-      <h3>패밀리 구독</h3>
-      <div class="price">월 100,000원</div>
-      <ul>
-        <li><i class="fas fa-check"></i> 패밀리용 대용량</li>
-        <li><i class="fas fa-check"></i> 주 5회 신선 배송</li>
-        <li><i class="fas fa-check"></i> 다양한 메뉴 제공</li>
-        <li><i class="fas fa-check"></i> 무료 배송</li>
-        <li><i class="fas fa-check"></i> 구독 해지 언제든 가능</li>
-        <li><i class="fas fa-check"></i> 구독 특별 할인</li>
-      </ul>
-      <a href="apply.html" class="order-button">구독 신청하기</a>
+  <div style="max-width: 1000px; margin: 40px auto; text-align: center;">
+    <h2 style="color: #2E7D32; margin-bottom: 20px;">정기구독 플랜</h2>
+    <div class="card-container">
+      <div class="plan-card">
+        <h3>주 3회 구독</h3>
+        <div class="price">월 45,000원</div>
+        <ul>
+          <li><i class="fas fa-check"></i> 주 3회 신선 배송</li>
+          <li><i class="fas fa-check"></i> 다양한 메뉴 제공</li>
+          <li><i class="fas fa-check"></i> 무료 배송</li>
+          <li><i class="fas fa-check"></i> 구독 해지 언제든 가능</li>
+        </ul>
+        <a href="apply.html" class="order-button">구독 신청하기</a>
+      </div>
+      <div class="plan-card">
+        <h3>주 5회 구독</h3>
+        <div class="price">월 65,000원</div>
+        <ul>
+          <li><i class="fas fa-check"></i> 주 5회 신선 배송</li>
+          <li><i class="fas fa-check"></i> 다양한 메뉴 제공</li>
+          <li><i class="fas fa-check"></i> 무료 배송</li>
+          <li><i class="fas fa-check"></i> 구독 해지 언제든 가능</li>
+          <li><i class="fas fa-check"></i> 구독 특별 할인</li>
+        </ul>
+        <a href="apply.html" class="order-button">구독 신청하기</a>
+      </div>
+      <div class="plan-card">
+        <h3>패밀리 구독</h3>
+        <div class="price">월 100,000원</div>
+        <ul>
+          <li><i class="fas fa-check"></i> 패밀리용 대용량</li>
+          <li><i class="fas fa-check"></i> 주 5회 신선 배송</li>
+          <li><i class="fas fa-check"></i> 다양한 메뉴 제공</li>
+          <li><i class="fas fa-check"></i> 무료 배송</li>
+          <li><i class="fas fa-check"></i> 구독 해지 언제든 가능</li>
+          <li><i class="fas fa-check"></i> 구독 특별 할인</li>
+        </ul>
+        <a href="apply.html" class="order-button">구독 신청하기</a>
+      </div>
     </div>
   </div>
 
@@ -285,7 +342,7 @@
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
       </div>
-      <p class="review-text">"집밥 맛이 나네요 매일 기대됩니다."</p>
+      <p class="review-text">"매일 다른 메뉴로 지루할 틈이 없고, 맛도 훌륭합니다!"</p>
       <p class="review-author">- 홍길동 학생</p>
     </div>
     <div class="review-card">
