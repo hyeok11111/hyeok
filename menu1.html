@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스꾸밀 - 한달 한식 안심 도시락</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Noto Sans KR', sans-serif; background: #f9f9f9; color: #333; padding: 20px; }
+    h1 { text-align: center; color: #2E7D32; margin-bottom: 20px; }
+    .calendar { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 24px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #eee; padding: 10px; vertical-align: top; min-width: 110px; min-height: 80px; }
+    th { background: #e8f5e9; color: #2E7D32; font-size: 16px; }
+    td { background: #fff; cursor: pointer; transition: background 0.2s; position: relative; }
+    td.selected { background: #d0f0d0; border: 2px solid #4CAF50; }
+    .date { font-weight: bold; color: #388E3C; margin-bottom: 6px; display: block; }
+    .order-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 12px 28px;
+      background: #4CAF50;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .order-btn:hover { background: #388E3C; transform: scale(1.05); }
+    @media (max-width: 900px) {
+      .calendar { padding: 8px; }
+      th, td { min-width: 80px; font-size: 13px; }
+    }
+    @media (max-width: 600px) {
+      th, td { min-width: 50px; padding: 6px; font-size: 11px; }
+      .calendar { padding: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>12월 한식 안심 도시락 식단표</h1>
+  <div class="calendar">
+    <table>
+      <thead>
+        <tr>
+          <th>일</th>
+          <th>월</th>
+          <th>화</th>
+          <th>수</th>
+          <th>목</th>
+          <th>금</th>
+          <th>토</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td onclick="toggleSelect(this, 1)"><span class="date">1</span>콩나물국<br>제육볶음<br>김치</td>
+          <td onclick="toggleSelect(this, 2)"><span class="date">2</span>된장국<br>닭볶음탕<br>나물</td>
+          <td onclick="toggleSelect(this, 3)"><span class="date">3</span>미역국<br>고등어구이<br>계란말이</td>
+          <td onclick="toggleSelect(this, 4)"><span class="date">4</span>감자탕<br>두부조림<br>오이무침</td>
+          <td onclick="toggleSelect(this, 5)"><span class="date">5</span>김치찌개<br>계란후라이<br>멸치볶음</td>
+          <td onclick="toggleSelect(this, 6)"><span class="date">6</span>북어국<br>불고기<br>브로콜리</td>
+        </tr>
+        <tr>
+          <td onclick="toggleSelect(this, 7)"><span class="date">7</span>순두부찌개<br>닭가슴살구이<br>시금치나물</td>
+          <td onclick="toggleSelect(this, 8)"><span class="date">8</span>된장찌개<br>고등어조림<br>나물</td>
+          <td onclick="toggleSelect(this, 9)"><span class="date">9</span>미역국<br>계란찜<br>불고기</td>
+          <td onclick="toggleSelect(this, 10)"><span class="date">10</span>감자조림<br>닭볶음탕<br>나물</td>
+          <td onclick="toggleSelect(this, 11)"><span class="date">11</span>콩나물국<br>돼지불고기<br>오이무침</td>
+          <td onclick="toggleSelect(this, 12)"><span class="date">12</span>김치찌개<br>계란말이<br>멸치볶음</td>
+          <td onclick="toggleSelect(this, 13)"><span class="date">13</span>북어국<br>닭가슴살구이<br>브로콜리</td>
+        </tr>
+        <tr>
+          <td onclick="toggleSelect(this, 14)"><span class="date">14</span>순두부찌개<br>고등어조림<br>시금치나물</td>
+          <td onclick="toggleSelect(this, 15)"><span class="date">15</span>된장국<br>제육볶음<br>콩나물무침</td>
+          <td onclick="toggleSelect(this, 16)"><span class="date">16</span>미역국<br>닭볶음탕<br>나물</td>
+          <td onclick="toggleSelect(this, 17)"><span class="date">17</span>감자탕<br>돼지불고기<br>오이무침</td>
+          <td onclick="toggleSelect(this, 18)"><span class="date">18</span>김치찌개<br>계란찜<br>멸치볶음</td>
+          <td onclick="toggleSelect(this, 19)"><span class="date">19</span>북어국<br>불고기<br>브로콜리</td>
+          <td onclick="toggleSelect(this, 20)"><span class="date">20</span>순두부찌개<br>닭가슴살구이<br>시금치나물</td>
+        </tr>
+        <tr>
+          <td onclick="toggleSelect(this, 21)"><span class="date">21</span>된장찌개<br>제육볶음<br>콩나물무침</td>
+          <td onclick="toggleSelect(this, 22)"><span class="date">22</span>미역국<br>닭볶음탕<br>나물</td>
+          <td onclick="toggleSelect(this, 23)"><span class="date">23</span>감자조림<br>돼지불고기<br>오이무침</td>
+          <td onclick="toggleSelect(this, 24)"><span class="date">24</span>김치찌개<br>계란말이<br>멸치볶음</td>
+          <td onclick="toggleSelect(this, 25)"><span class="date">25</span>북어국<br>닭가슴살구이<br>브로콜리</td>
+          <td onclick="toggleSelect(this, 26)"><span class="date">26</span>순두부찌개<br>고등어조림<br>시금치나물</td>
+          <td onclick="toggleSelect(this, 27)"><span class="date">27</span>된장국<br>제육볶음<br>콩나물무침</td>
+        </tr>
+        <tr>
+          <td onclick="toggleSelect(this, 28)"><span class="date">28</span>미역국<br>닭볶음탕<br>나물</td>
+          <td onclick="toggleSelect(this, 29)"><span class="date">29</span>감자탕<br>돼지불고기<br>오이무침</td>
+          <td onclick="toggleSelect(this, 30)"><span class="date">30</span>김치찌개<br>계란찜<br>멸치볶음</td>
+          <td></td><td></td><td></td><td></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="order-btn" id="orderBtn" onclick="goToOrderForm()" style="display:none;">선택한 날짜 도시락 주문하기</button>
+  </div>
+  <a href="../index.html" class="order-btn" style="background:#888; margin-top:30px;">메인으로 돌아가기</a>
+  <script>
+    const selectedDates = new Set();
+    function toggleSelect(td, date) {
+      if (td.classList.contains('selected')) {
+        td.classList.remove('selected');
+        selectedDates.delete(date);
+      } else {
+        td.classList.add('selected');
+        selectedDates.add(date);
+      }
+      document.getElementById('orderBtn').style.display = selectedDates.size > 0 ? 'block' : 'none';
+    }
+    function goToOrderForm() {
+      // 선택한 날짜를 URL 파라미터로 전달
+      const dates = Array.from(selectedDates).sort((a,b)=>a-b);
+      window.location.href = `apply.html?dates=${dates.join(',')}`;
+    }
+  </script>
+</body>
+</html>
